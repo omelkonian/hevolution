@@ -1,0 +1,19 @@
+name:               Simple-GA
+version:            0.0.1
+cabal-version:      >= 1.8
+build-type:         Simple
+
+executable          simple-ga
+  main-is:          Main.hs
+
+  other-modules: Operators, Random, Runtime, Stages, Types, Utilities
+
+  ghc-options:      -Wall -fwarn-tabs -O2
+
+  build-depends:  base, mtl, hspec, QuickCheck,
+                  pretty-show, MonadRandom,
+                  containers, split
+
+  ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N
+
+  extensions: ImplicitParams
